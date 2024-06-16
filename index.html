@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <section class="container">
+      <article class="car-leasing-calculator">
+        <h1>Car Leasing Calculator</h1>
+        <form action="">
+          <div class="row">
+            <div class="column">
+              <label for="carTypeOption">Car Type:</label>
+              <select name="CarType" id="carTypeOption">
+                <option value="BrandNew" selected>Brand New</option>
+                <option value="Used">Used</option>
+              </select>
+
+              <label for="carValue">Car Value (€10,000 -
+                €200,000):</label
+              >
+              <input
+                type="number"
+                name="CarValue"
+                id="carValue"
+                min="10000"
+                max="200000"
+                value="120000"
+              />
+              <input
+              class="range-slider"
+                type="range"
+                id="carValueSlider"
+                min="10000"
+                max="200000"
+                value="120000"
+              />
+            </div>
+            <div class="column">
+              <label for="carLeasePeriod">Lease Period (months):</label>
+              <select name="LeasePeriod" id="carLeasePeriod">
+                <option value="12" selected>12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+                <option value="60">60</option>
+              </select>
+
+              <label for="downPaymentPercent">Down Payment (10% - 50%):</label>
+              <input
+                type="number"
+                name="downPaymentPercent"
+                id="downPaymentPercent"
+                min="10"  
+                max="50"
+                value="10"
+              />
+              <input
+                class="range-slider"
+                type="range"
+                id="downPaymentSlider"
+                min="0"
+                max="50"
+                value="10"
+                step="5"
+              />
+            </div>
+          </div>
+        </form>
+      </article>
+      <div class="separator"></div>
+      <article>
+        <h2>Leasing Details</h2>
+        <div class="row">
+          <div class="column-leasing-details">
+            <p id="leasingCostDisplay">Total Leasing Cost:</p>
+            <p id="downPaymentDisplay">Down Payment:</p>
+          </div>
+          <div class="column-separator">
+
+          </div>
+          <div class="column-leasing-details">
+            <p id="monthlyInstallmentDisplay">Montly Installment:</p>
+            <p id="interestRateDisplay">Interest Rate:</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+  <script src="assets/js/index.js"></script>
+</html>
